@@ -3141,7 +3141,7 @@ class DevicePorts {
 
 		// Check the user's permissions to modify this device
 		if($dev->Rights!='Write'){return false;}
-
+		
 		$sql="UPDATE fac_Ports SET ConnectedDeviceID=NULL, ConnectedPort=NULL WHERE
 			DeviceID=$dev->DeviceID OR ConnectedDeviceID=$dev->DeviceID;";
 
